@@ -6,7 +6,7 @@ class UsersController < ApplicationController
         #@users = User.all.order(created_at: :desc)
         @q = User.ransack(params[:q])   #its for dashboard  of user 
         @users = @q.result(distinct: true)
-        render json: @users
+        #render json: @users
     end
 
     def show
